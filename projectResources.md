@@ -1,8 +1,19 @@
 # Resources
 
 This Markdown document covers all resources currently in use,\
-&emsp; those planned for future use in the creation and development of this react project,\
-&emsp; and react projects I intend to make after finishing this tutorial.
+&emsp; and those planned for future use in the creation and development\
+&emsp; of this react project, and react projects I intend to make after finishing this tutorial.
+
+## Table of Contents
+I. [Current Resources](#current-resources)\
+&emsp; 1. [Miguel Grinberg's React Mega-Tutorial](#miguel-grinbergs-react-mega-tutorial)\
+&emsp; 2. [JavaScript Resources](#javascript-resources)\
+&emsp; 3. [Current UI Framework: Bootstrap](#current-ui-framework-boostrap)\
+II. [Future Resources](#future-resources)\
+&emsp; 1. [Explanation/Guide to Using Promises in JavaScript](#explanationguide-to-using\-promises-in-javascript)\
+&emsp; 2. [Migration away from Create-React-App (CRA)](#migration-away-from-create-react\-app-cra)\
+&emsp; 3. [UI Libraries & Frameworks](#ui-libraries--frameworks)\
+&emsp; 4. [Draggables](#draggables)
 
 ## Current Resources
 
@@ -17,6 +28,10 @@ I'm still learning JavaScript,\
 &emsp; they are indeed helpful for improving my familiarity with the language going forward.
 
 * the [JS overview](https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-1-modern-javascript) from Miguel Grinberg's mega-tutorial
+
+### Current UI Framework: Boostrap
+[React-Bootstrap](https://react-boostrap.github.io) is the primary UI library-of-choice in [Miguel Grinberg's mega-tutorial](https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-3-working-with-components).\
+Other react-compatible UI libraries are listed under the **Future Resources** Section
 
 ## Future Resources
 
@@ -38,3 +53,12 @@ Something obvious but still important to note is that, because the project uses 
 The current top candidate for where to migrate the project to once the [mega-tutorial](https://blog.miguelgrinberg.com/post/introducing-the-react-mega-tutorial) is completed is [Next.js](https://nextjs.org/docs/app/getting-started/installation),\
 &emsp; which uses Server-Side Rendering (SSR) to send ready-mad HTML from the backend to the user.\
 If this is not preferable, and the client-side rendering default to is preferred, the runner-up option is [Vite](https://vite.dev/guide/).
+
+### UI Libraries & Frameworks
+
+* [Material UI (MUI)](https://mui.com/)
+* [Ant Design](https://ant.design)
+
+### Draggables
+
+[React-Draggable](https://github.com/react-grid-layout/react-draggable#installation) is a library that I intend to use for future react applications.

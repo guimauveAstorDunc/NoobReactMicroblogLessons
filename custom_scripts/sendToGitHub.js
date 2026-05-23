@@ -1,10 +1,10 @@
-// Custom Script added to React project
-// in order to make committing changes easier.
-// The script adds, commits, and pushes any and all changes made,
-// before opening GitHub on the browser to see the latest commit.
+/* Custom Script added to React project
+    in order to make committing changes easier.
+    The script adds, commits, and pushes any and all changes made,
+    before opening GitHub on the browser to see the latest commit. */
 
-// DISCLAIMER: AI was partially used in the creation of this script (Google AI Overview)
-//             and in verifying that the script works as intended.
+/* DISCLAIMER: AI was partially used in the creation of this script (Google AI Overview)
+    and in verifying that the script works as intended. */
 
 const openBrowser = require('react-dev-utils/openBrowser');
 
@@ -23,8 +23,8 @@ if (process.cwd() !== rootDir) {
     process.exit(1);
 }
 
-// Google AI Overview used to Identify execSync
-// as the function needed to run terminal commands from a JS Script.
+/* Google AI Overview used to Identify execSync
+    as the function needed to run terminal commands from a JS Script. */
 try {
     console.log('Adding changes...');
     execSync('git add .');
