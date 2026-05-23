@@ -17,10 +17,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "open-cli https://github.com/guimauveAstorDunc/NoobReactMicroblogLessons && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "send-to-github": "node ./custom_scripts/sendToGitHub.js"
   },
   "eslintConfig": {
     "extends": [
