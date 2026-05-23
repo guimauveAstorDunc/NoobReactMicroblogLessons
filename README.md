@@ -14,6 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run send-to-github -- "Commit Message"`
+
+Adds, commits, and pushes all changes in the project to GitHub.\
+Also opens [this exact repository](https://github.com/guimauveAstorDunc/NoobReactMicroblogLessons) upon completion.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
