@@ -1,3 +1,5 @@
+import Container from 'react-bootstrap/Container';
+
 export default function Posts() {
     const posts = [
     {
@@ -19,7 +21,7 @@ export default function Posts() {
   ];
 
   return (
-    <>
+    <Container className="Posts">
         {posts.length === 0 ?
             <p>There are no blog posts.</p>
         :
@@ -33,6 +35,6 @@ export default function Posts() {
                 );
             })
         }
-    </>
+    </Container>
   );
 }
