@@ -8,7 +8,7 @@ This Markdown document covers all resources currently in use,\
 I. [Current Resources](#current-resources)\
 &emsp; 1. [Miguel Grinberg's React Mega-Tutorial](#miguel-grinbergs-react-mega-tutorial)\
 &emsp; 2. [JavaScript Resources](#javascript-resources)\
-&emsp; 3. [Current UI Framework: Bootstrap](#current-ui-framework-boostrap)\
+&emsp; 3. [Current UI Framework: Bootstrap](#current-ui-framework-bootstrap)\
 II. [Future Resources](#future-resources)\
 &emsp; 1. [Explanation/Guide to Using Promises in JavaScript](#explanationguide-to-using\-promises-in-javascript)\
 &emsp; 2. [Migration away from Create-React-App (CRA)](#migration-away-from-create-react\-app-cra)\
@@ -29,8 +29,8 @@ I'm still learning JavaScript,\
 
 * the [JS overview](https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-1-modern-javascript) from Miguel Grinberg's mega-tutorial
 
-### Current UI Framework: Boostrap
-[React-Bootstrap](https://react-boostrap.github.io) is the primary UI library-of-choice in [Miguel Grinberg's mega-tutorial](https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-3-working-with-components).\
+### Current UI Framework: Bootstrap
+[React-Bootstrap](https://react-bootstrap.github.io) is the primary UI library-of-choice in [Miguel Grinberg's mega-tutorial](https://blog.miguelgrinberg.com/post/the-react-mega-tutorial-chapter-3-working-with-components).\
 Other react-compatible UI libraries are listed under the **Future Resources** Section
 
 ## Future Resources

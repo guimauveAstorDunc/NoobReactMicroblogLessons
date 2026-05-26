@@ -6,7 +6,7 @@ export default function Sidebar() {
     return (
         <Navbar sticky="top" className="flex-column Sidebar">
             <Nav.Item>
-                {/* the "end" keyword
+                {/* "end" keyword
                     indicates that the page is only active
                     if the URL matches the "to" tag EXACTLY.
                     
