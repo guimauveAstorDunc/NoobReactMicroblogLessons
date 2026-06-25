@@ -54,6 +54,15 @@ The current top candidate for where to migrate the project to once the [mega-tut
 &emsp; which uses Server-Side Rendering (SSR) to send ready-mad HTML from the backend to the user.\
 If this is not preferable, and the client-side rendering default to is preferred, the runner-up option is [Vite](https://vite.dev/guide/).
 
+### Email APIs
+
+The project uses a gmail account for email verification, password recovery, and other related functionality that requires emails be sent to a user with an account on the website. I am currently of the understanding that, in production, the more common choices for websites to use are:
+* [SendGrid](https://www.twilio.com/en-us/sendgrid), which the React mega-tutorial uses,
+* [Postmark](https://postmarkapp.com/developer/api/email-api), as the one most commonly cited as "the best" online,
+* [MailGun](https://www.mailgun.com/), which has similar reception online to SendGrid (generally positive from what I can tell),
+* [Resend](https://resend.com/), as an alternative to Postmark as the API-of-choice for personal/smaller-scale websites,
+* [Amazon Simple Email Services (SES)](https://docs.aws.amazon.com/ses/latest/dg/email-validation-api.html), as the "industrial" option.
+
 ### UI Libraries & Frameworks
 
 * [Material UI (MUI)](https://mui.com/)
