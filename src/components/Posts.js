@@ -1,17 +1,31 @@
 // New Stuff
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 // Old Stuff
 import Container from 'react-bootstrap/Container'; // Still using this in the JSX.
 
+// Global Const for Backend API.
+const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
+
 export default function Posts() {
   const [posts, setPosts] = useState();
-
-  // TODO: add side effect function to request posts
+  
+  useEffect(() => {
+    // Inner Lambda Func called because useState() is NOT async.
+    (async () => {
+      const response = await fetch(BASE_API_URL + '/api/feed');
+      if (response.ok) {
+        const results = await response.json();
+        setPosts(results.data);
+      } else {
+        setPosts(null);
+      }
+    })();
+  }, []);
 
   return (
     <>
-      {posts === undefined ?
+      {(posts === undefined || posts === null) ?
         <Spinner animation="border"/>
       :
         <>

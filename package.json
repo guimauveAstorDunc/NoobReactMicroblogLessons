@@ -43,5 +43,6 @@
   },
   "devDependencies": {
     "open-cli": "^9.0.0"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
