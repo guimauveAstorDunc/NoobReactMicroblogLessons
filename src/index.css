@@ -51,7 +51,7 @@
 
 .Post:hover {
   background-color: #f8f8f8;
-  transition: background-color 0.05s ease-in;
+  transition: background-color 0.05s ease-out;
 }
 
 .Post a {
