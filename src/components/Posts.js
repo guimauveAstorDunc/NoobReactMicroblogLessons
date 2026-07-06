@@ -1,8 +1,6 @@
-// New Stuff
 import { useState, useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
-// Old Stuff
-import Container from 'react-bootstrap/Container'; // Still using this in the JSX.
+import Post from './Post'
 
 // Global Const for Backend API.
 const BASE_API_URL = process.env.REACT_APP_BASE_API_URL;
@@ -25,25 +23,21 @@ export default function Posts() {
 
   return (
     <>
-      {(posts === undefined || posts === null) ?
+      {(posts === undefined) ?
         <Spinner animation="border"/>
       :
         <>
-          <Container className="Posts">
+          {posts === null ?
+            <p>Could not retrieve blog posts.</p>
+          :
+            <>
               {posts.length === 0 ?
-                  <p>There are no blog posts.</p>
-                  :
-                  posts.map(post => {
-                    return (
-                      <p key={post.id}>
-                          <b>{post.author.username}</b> &mdash; {post.timestamp}
-                          <br />
-                          {post.text}
-                          </p>
-                      );
-                    })
+                <p>There are no blog posts.</p>
+              :
+                posts.map(post => <Post key={post.id} post={post} />)
               }
-          </Container>
+            </>
+          }
         </>
       }
     </>
