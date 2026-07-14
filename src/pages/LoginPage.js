@@ -11,7 +11,7 @@ export default function LoginPage() {
     const passwordField = useRef();
 
     useEffect(() => {
-        usernameField.current.focus();
+        usernameField.current?.focus();
     }, []);
 
     const onSubmit = (ev) => {
