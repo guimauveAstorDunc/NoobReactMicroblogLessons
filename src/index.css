@@ -16,6 +16,7 @@
 }
 
 .Sidebar .nav-item {
+  text-indent: 4px;
   width: 100%;
 }
 
@@ -33,6 +34,10 @@
 
 .Sidebar .nav-item .active {
   background-color: #ddeeff;
+}
+
+.Sidebar a:hover, .Sidebar .nav-item .active {
+  border-radius: 3px;
 }
 
 .Posts {
