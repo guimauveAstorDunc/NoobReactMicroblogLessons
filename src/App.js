@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ApiProvider from './contexts/ApiProvider';
+import FlashProvider from './contexts/FlashProvider';
 import Header from './components/Header';
 import FeedPage from './pages/FeedPage';
 import ExplorePage from './pages/ExplorePage';
@@ -13,7 +14,8 @@ export default function App() {
     // Parent Container
     <Container fluid className="App">
       <BrowserRouter>
-        <ApiProvider>
+        {/* Contexts */}
+        <FlashProvider><ApiProvider>
           <Header /> {/* Navbar */}
 
           <Routes>
@@ -24,7 +26,7 @@ export default function App() {
             <Route path="/register" element={<RegistrationPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </ApiProvider>
+        </ApiProvider></FlashProvider>
       </BrowserRouter>
     </Container>
   );

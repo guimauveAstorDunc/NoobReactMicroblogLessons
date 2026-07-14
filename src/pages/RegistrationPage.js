@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApi } from '../contexts/ApiProvider';
+import { useFlash } from '../contexts/FlashProvider';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Body from '../components/Body';
@@ -8,12 +9,10 @@ import InputField from '../components/InputField';
 
 export default function RegistrationPage() {
     const [formErrors, setFormErrors] = useState({});
-    const usernameField = useRef();
-    const emailField = useRef();
-    const passwordField = useRef();
-    const password2Field = useRef();
+    const usernameField = useRef(); const emailField = useRef();
+    const passwordField = useRef(); const password2Field = useRef();
     const navigate = useNavigate();
-    const api = useApi();
+    const api = useApi(); const flash = useFlash();
 
     useEffect(() => {
         usernameField.current?.focus();
@@ -33,6 +32,7 @@ export default function RegistrationPage() {
                 setFormErrors(data.body.errors.json);
             } else {
                 setFormErrors({});
+                flash('You have successfully registered!','success');
                 navigate('/login');
             }
         }   
