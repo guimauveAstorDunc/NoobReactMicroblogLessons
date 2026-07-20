@@ -40,6 +40,14 @@
   border-radius: 3px;
 }
 
+.dropdown-item, .dropdown-item.active {
+  color: #444;
+}
+
+.dropdown-item.active {
+  background-color: #def;
+}
+
 .Posts {
   margin-top: 8px;
 }

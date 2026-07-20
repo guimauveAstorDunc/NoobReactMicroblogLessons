@@ -2,7 +2,10 @@ import Container from 'react-bootstrap/Container';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ApiProvider from './contexts/ApiProvider';
 import FlashProvider from './contexts/FlashProvider';
+import UserProvider from './contexts/UserProvider';
 import Header from './components/Header';
+import PrivateRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
 import FeedPage from './pages/FeedPage';
 import ExplorePage from './pages/ExplorePage';
 import UserPage from './pages/UserPage';
@@ -15,18 +18,26 @@ export default function App() {
     <Container fluid className="App">
       <BrowserRouter>
         {/* Contexts */}
-        <FlashProvider><ApiProvider>
+        <FlashProvider><ApiProvider><UserProvider>
           <Header /> {/* Navbar */}
 
           <Routes>
-            <Route path="/" element={<FeedPage />} />
-            <Route path="/explore" element={<ExplorePage />} />
-            <Route path="/user/:username" element={<UserPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegistrationPage />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/login" element={
+              <PublicRoute><LoginPage /></PublicRoute>
+            } />
+            <Route path="/register" element={
+              <PublicRoute><RegistrationPage /></PublicRoute>
+            } />
+            <Route path="*" element={
+              <PrivateRoute><Routes>
+                  <Route path="/" element={<FeedPage />} />
+                  <Route path="/explore" element={<ExplorePage />} />
+                  <Route path="/user/:username" element={<UserPage />} />
+                  <Route path="*" element={<Navigate to="/" />} />
+              </Routes></PrivateRoute>
+            } />
           </Routes>
-        </ApiProvider></FlashProvider>
+        </UserProvider></ApiProvider></FlashProvider>
       </BrowserRouter>
     </Container>
   );
