@@ -25,7 +25,7 @@ export default function UserPage() {
             if (response.ok) {
                 setUser(response.body);
                 if (response.body.username !== loggedInUser.username) {
-                    const follower = api.get(
+                    const follower = await api.get(
                         '/me/following/' + response.body.id);
                     if (follower.status === 204) {
                         setIsFollower(true);
@@ -45,11 +45,27 @@ export default function UserPage() {
         navigate('/edit');
     }
     const follow = async () => {
-        // TODO
-    }
+        const response = await api.post('/me/following/' + user.id);
+        if (response.ok) {
+            flash(
+                <>
+                    You are now following <b>{user.username}</b>.
+                </>, 'success'
+            );
+            setIsFollower(true);
+        }
+    };
     const unfollow = async () => {
-        // TODO
-    }
+        const response = await api.delete('/me/following/' + user.id);
+        if (response.ok) {
+            flash(
+                <>
+                    You are unfollowed <b>{user.username}</b>.
+                </>, 'success'
+            );
+            setIsFollower(false);
+        }
+    };
 
     return (
         <Body sidebar>
