@@ -12,6 +12,7 @@ import UserPage from './pages/UserPage';
 import LoginPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
 import EditUserPage from './pages/EditUserPage';
+import ChangePasswordPage from './pages/ChangePasswordPage';
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
                   <Route path="/explore" element={<ExplorePage />} />
                   <Route path="/user/:username" element={<UserPage />} />
                   <Route path="/edit" element={<EditUserPage />} />
+                  <Route path="/password" element={<ChangePasswordPage />} />
                   <Route path="*" element={<Navigate to="/" />} />
               </Routes></PrivateRoute>
             } />
